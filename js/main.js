@@ -31,10 +31,8 @@ const memberModalClose = document.getElementById('memberModalClose');
 const memberModalMedia = document.getElementById('memberModalMedia');
 const memberModalMediaLabel = document.getElementById('memberModalMediaLabel');
 const memberModalMediaPlaceholder = document.getElementById('memberModalMediaPlaceholder');
-const memberModalAvatar = document.getElementById('memberModalAvatar');
 const memberModalTitle = document.getElementById('memberModalTitle');
 const memberModalRole = document.getElementById('memberModalRole');
-const memberModalTags = document.getElementById('memberModalTags');
 const memberModalText = document.getElementById('memberModalText');
 const memberModalCard = memberModal ? memberModal.querySelector('.member-modal-card') : null;
 
@@ -70,8 +68,8 @@ const memberInfo = {
   juan: {
     title: 'Juan Rondon',
     role: 'Movil Android',
-    text: 'Lider movil del modulo Android: implementacion Kotlin, pruebas de app y coordinacion de funcionalidades moviles.',
-    tags: ['Kotlin', 'APK', 'Lider movil'],
+    text: 'Soy desarrollador movil especializado en la creacion de aplicaciones modernas utilizando React Native, NativeWind, Tailwind CSS y Expo. Me enfoco en construir interfaces limpias, rapidas y funcionales, combinando buen diseno con rendimiento solido. Trabajo con una mentalidad practica, orientada a resultados, desarrollando soluciones escalables que realmente aportan valor al usuario.',
+    tags: ['React Native', 'NativeWind', 'Tailwind CSS', 'Expo'],
     avatar: '/assets/team/juan-rondon-lider.png',
     palette: {
       accent: '#7b4ae2',
@@ -128,7 +126,7 @@ const memberInfo = {
 let activeMemberCard = null;
 
 function openMemberModal(key) {
-  if (!memberModal || !memberModalTitle || !memberModalRole || !memberModalText || !memberModalAvatar || !memberModalTags || !memberInfo[key]) return;
+  if (!memberModal || !memberModalTitle || !memberModalRole || !memberModalText || !memberInfo[key]) return;
   const info = memberInfo[key];
 
   if (activeMemberCard) activeMemberCard.classList.remove('is-active');
@@ -138,9 +136,6 @@ function openMemberModal(key) {
   memberModalTitle.textContent = info.title;
   memberModalRole.textContent = info.role;
   memberModalText.textContent = info.text;
-  memberModalAvatar.innerHTML = info.avatar
-    ? `<img src="${info.avatar}" alt="${info.title}">`
-    : `<span>${info.avatarText || ''}</span>`;
   if (memberModalMediaLabel) memberModalMediaLabel.textContent = info.role;
   if (memberModalMedia) {
     if (info.avatar) {
@@ -151,10 +146,6 @@ function openMemberModal(key) {
       if (memberModalMediaPlaceholder) memberModalMediaPlaceholder.textContent = info.avatarText || '';
     }
   }
-  memberModalTags.innerHTML = (info.tags || [])
-    .map(tag => `<span class="member-chip">${tag}</span>`)
-    .join('');
-
   if (memberModalCard && info.palette) {
     memberModalCard.style.setProperty('--modal-accent', info.palette.accent);
     memberModalCard.style.setProperty('--modal-text', info.palette.text);
