@@ -73,22 +73,6 @@ ul { list-style: none; }
   background: var(--beige);
 }
 
-/* ====== SECTION LABELS / TAGS ====== */
-.tag {
-  display: inline-block;
-  font-family: var(--mono);
-  font-size: 0.65rem;
-  font-weight: 400;
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
-  color: var(--color-text-light);
-  border: 1px solid var(--border-color);
-  border-radius: var(--radius-sm);
-  padding: 6px 14px;
-  margin-bottom: 16px;
-  background: var(--color-bg);
-}
-
 /* ====== SECTION HEADINGS (left-aligned with bar) ====== */
 .section-heading {
   font-family: var(--mono);
@@ -270,12 +254,6 @@ ul { list-style: none; }
   padding: 64px 0;
   max-width: 640px;
   margin: 0 auto;
-}
-.hero-content .tag {
-  margin-bottom: 14px;
-}
-.hero-content .tag + .tag {
-  margin-left: 8px;
 }
 .hero-title {
   font-family: var(--sans);
@@ -508,12 +486,6 @@ ul { list-style: none; }
   margin-bottom: 12px;
   line-height: 1.5;
 }
-.video-embed-label {
-  font-family: var(--mono);
-  font-size: 0.7rem;
-  color: var(--text-muted);
-}
-
 /* ====== TEAM ====== */
 .team-photo-box {
   width: 100%;

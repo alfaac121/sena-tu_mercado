@@ -40,8 +40,7 @@ const memberInfo = {
   freddy: {
     title: 'Freddy Reyes',
     role: 'Desarrollo Web',
-    text: 'Encargado del desarrollo web de TMS: estructura de vistas, experiencia de navegacion y ajustes visuales de la landing.',
-    tags: ['Frontend', 'Landing'],
+    text: 'Soy desarrollador web especializado en el diseno y desarrollo de interfaces dinamicas. Utilizo tecnologias modernas para crear paginas rapidas, seguras y visualmente atractivas. Me enfoco en la usabilidad, la optimizacion y el detalle visual, asegurando una navegacion intuitiva. Trabajo con una mentalidad orientada a resultados, creando soluciones eficientes y adaptables.',
     avatar: '/assets/team/freddy-reyes-web.png',
     palette: {
       accent: '#3c73d4',
@@ -54,8 +53,7 @@ const memberInfo = {
   brahian: {
     title: 'Brahian Alexandre',
     role: 'API / Backend',
-    text: 'Responsable de la capa de servicios y backend: endpoints, logica del sistema e integracion con base de datos.',
-    tags: ['Servicios', 'Base de datos'],
+    text: 'Responsable del backend y la arquitectura de servicios: desarrollo de APIs, implementacion de logica del negocio e integracion con bases de datos. Enfocado en rendimiento, seguridad y escalabilidad para garantizar sistemas solidos y eficientes.',
     avatarText: 'BA',
     palette: {
       accent: '#2d9868',
@@ -69,7 +67,6 @@ const memberInfo = {
     title: 'Juan Rondon',
     role: 'Movil Android',
     text: 'Soy desarrollador movil especializado en la creacion de aplicaciones modernas utilizando React Native, NativeWind, Tailwind CSS y Expo. Me enfoco en construir interfaces limpias, rapidas y funcionales, combinando buen diseno con rendimiento solido. Trabajo con una mentalidad practica, orientada a resultados, desarrollando soluciones escalables que realmente aportan valor al usuario.',
-    tags: ['React Native', 'NativeWind', 'Tailwind CSS', 'Expo'],
     avatar: '/assets/team/juan-rondon-lider.png',
     palette: {
       accent: '#7b4ae2',
@@ -82,8 +79,7 @@ const memberInfo = {
   omar: {
     title: 'Omar Jordan',
     role: 'Desktop / Godot',
-    text: 'Encargado del entorno de escritorio y del prototipo en Godot, junto con integracion entre plataformas.',
-    tags: ['Desktop', 'Integracion'],
+    text: 'Encargado del desarrollo del entorno de escritorio y la implementacion del prototipo funcional en Godot Engine. Lidera la construccion de la capa de presentacion para plataformas de escritorio, asegurando la integracion fluida con los demas modulos del sistema. Ademas, gestiona la compatibilidad entre plataformas, garantizando un comportamiento consistente y estable en los diferentes entornos de ejecucion.',
     avatarText: 'OJ',
     palette: {
       accent: '#4f6e9f',
@@ -96,8 +92,7 @@ const memberInfo = {
   valeri: {
     title: 'Valeri',
     role: 'UI/UX · Diseno',
-    text: 'Responsable de experiencia de usuario y diseno visual: figma, mockups y prototipado de interfaz.',
-    tags: ['Figma', 'Mockups', 'Prototipado'],
+    text: 'Responsable del diseno de experiencia de usuario e interfaz visual del proyecto. Su trabajo abarca desde la conceptualizacion de la arquitectura de informacion hasta la creacion de wireframes, mockups de alta fidelidad y prototipos interactivos mediante Figma. Garantiza que cada pantalla cumpla con principios de usabilidad, accesibilidad y coherencia visual, asegurando una experiencia intuitiva y atractiva para el usuario final.',
     avatarText: 'V',
     palette: {
       accent: '#cc5b8f',
@@ -110,8 +105,7 @@ const memberInfo = {
   heidy: {
     title: 'Heidy Calderon',
     role: 'Documentacion · Lider',
-    text: 'Lidera la documentacion del proyecto: evidencias, entregables PDF y gestion del material de soporte de TMS.',
-    tags: ['PDF', 'Evidencias', 'Gestion'],
+    text: 'Responsable de la gestion integral de la documentacion tecnica y operativa del proyecto. Coordina la elaboracion de evidencias de avance, la generacion de entregables formales en formato PDF y la administracion del material de soporte del sistema TMS. Su rol como lider implica velar por la trazabilidad del proyecto, mantener los registros actualizados y asegurar que toda la informacion este organizada y disponible para los distintos miembros del equipo.',
     avatarText: 'HC',
     palette: {
       accent: '#c6812f',
