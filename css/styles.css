@@ -699,7 +699,6 @@ ul { list-style: none; }
 .member-modal-grid {
   display: grid;
   grid-template-columns: 1fr 0.95fr;
-  min-height: 300px;
 }
 .member-modal-media {
   position: relative;
@@ -796,10 +795,9 @@ ul { list-style: none; }
 @media (max-width: 780px) {
   .member-modal-grid {
     grid-template-columns: 1fr;
-    min-height: auto;
   }
   .member-modal-media {
-    min-height: 170px;
+    min-height: 150px;
     border-bottom-left-radius: 0;
     border-bottom-right-radius: 0;
     background-position: center center;
