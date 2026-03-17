@@ -36,7 +36,6 @@
   <section class="hero" id="inicio">
     <div class="container hero-content">
       <h1 class="hero-title">
-        <img src="/assets/branding/logo-tms.png" alt="Logo Tu Mercado SENA" class="hero-title-logo">
         <span>TMS</span>
       </h1>
       <p class="hero-name">Tu Mercado SENA</p>
@@ -193,66 +192,58 @@
       <p class="team-hint">Haz clic en cada integrante para ver su información.</p>
 
       <div class="team-members">
-        <a href="#perfil-freddy" class="member-card member-card-link">
+        <button type="button" class="member-card member-card-link" data-member="freddy">
           <div class="member-avatar">
             <img src="/assets/team/freddy-reyes-web.png" alt="Freddy Reyes - Desarrollo Web">
           </div>
           <strong>Freddy Reyes</strong>
           <span class="member-role">DESARROLLO WEB</span>
           <span class="member-tags">Frontend · Landing</span>
-        </a>
-        <a href="#perfil-brahian" class="member-card member-card-link">
+        </button>
+        <button type="button" class="member-card member-card-link" data-member="brahian">
           <div class="member-avatar">BA</div>
           <strong>Brahian Alexandre</strong>
           <span class="member-role">API / BACKEND</span>
           <span class="member-tags">Servicios · Base de datos</span>
-        </a>
-        <a href="#perfil-juan" class="member-card member-card-link">
+        </button>
+        <button type="button" class="member-card member-card-link" data-member="juan">
           <div class="member-avatar">
             <img src="/assets/team/juan-rondon-lider.png" alt="Juan Rondon - Líder Móvil">
           </div>
           <strong>Juan Rondon</strong>
           <span class="member-role">MÓVIL ANDROID</span>
           <span class="member-tags">Líder móvil · Kotlin · APK</span>
-        </a>
-        <a href="#perfil-omar" class="member-card member-card-link">
+        </button>
+        <button type="button" class="member-card member-card-link" data-member="omar">
           <div class="member-avatar">OJ</div>
           <strong>Omar Jordan</strong>
           <span class="member-role">DESKTOP / GODOT</span>
           <span class="member-tags">Desktop · Integración</span>
-        </a>
-        <a href="#perfil-valeri" class="member-card member-card-link">
+        </button>
+        <button type="button" class="member-card member-card-link" data-member="valeri">
           <div class="member-avatar">V</div>
           <strong>Valeri</strong>
           <span class="member-role">UI/UX · DISEÑO</span>
           <span class="member-tags">Mockups · Figma</span>
-        </a>
-      </div>
-
-      <div class="team-details">
-        <article id="perfil-freddy" class="team-detail-card">
-          <h3>Freddy Reyes · Web</h3>
-          <p>Encargado del desarrollo web de TMS: estructura de vistas, experiencia de navegación y ajustes visuales de la landing.</p>
-        </article>
-        <article id="perfil-brahian" class="team-detail-card">
-          <h3>Brahian Alexandre · API</h3>
-          <p>Responsable de la capa de servicios y backend: endpoints, lógica del sistema e integración con base de datos.</p>
-        </article>
-        <article id="perfil-juan" class="team-detail-card">
-          <h3>Juan Rondon · Móvil</h3>
-          <p>Líder del módulo móvil: implementación Android, pruebas de app y coordinación de funcionalidades del entorno móvil.</p>
-        </article>
-        <article id="perfil-omar" class="team-detail-card">
-          <h3>Omar Jordan · Desktop</h3>
-          <p>Encargado del entorno de escritorio y prototipo en Godot, junto con procesos de integración entre plataformas.</p>
-        </article>
-        <article id="perfil-valeri" class="team-detail-card">
-          <h3>Valeri · UI/UX</h3>
-          <p>Responsable de diseño y experiencia de usuario: mockups, estilo visual y consistencia de componentes.</p>
-        </article>
+        </button>
+        <button type="button" class="member-card member-card-link" data-member="heidy">
+          <div class="member-avatar">HC</div>
+          <strong>Heidy Calderon</strong>
+          <span class="member-role">DOCUMENTACIÓN · LÍDER</span>
+          <span class="member-tags">PDF · Evidencias</span>
+        </button>
       </div>
     </div>
   </section>
+
+  <div class="member-modal" id="memberModal" aria-hidden="true">
+    <div class="member-modal-card" role="dialog" aria-modal="true" aria-labelledby="memberModalTitle">
+      <button type="button" class="member-modal-close" id="memberModalClose" aria-label="Cerrar">×</button>
+      <h3 id="memberModalTitle">Integrante</h3>
+      <p class="member-modal-role" id="memberModalRole"></p>
+      <p class="member-modal-text" id="memberModalText"></p>
+    </div>
+  </div>
 
   <!-- ====== ENCUESTA ====== -->
   <section class="section" id="encuesta">
@@ -309,11 +300,11 @@
       </div>
       <div class="footer-bottom">
         <div class="footer-sena">
-          <img src="/assets/branding/logo-tms.png" alt="Logo Tu Mercado SENA" class="footer-sena-logo">
+          <img src="/assets/branding/logo-sena.svg" alt="Logo SENA" class="footer-sena-logo">
           <div class="sena-badge">SENA</div>
           <div>
             <strong>Servicio Nacional de Aprendizaje — SENA</strong>
-            <span>Centro de Electricidad y Automatizacion Industrial - CEAI · Ficha [numero] · Programa [nombre] · 2026</span>
+            <span>Centro de Electricidad y Automatizacion Industrial - CEAI · Ficha 2999567 · Programa Analisis y Desarrollo de Software · 2026</span>
           </div>
         </div>
         <span class="footer-copy">© 2026 TMS PROJECT · TODOS LOS DERECHOS RESERVADOS</span>
