@@ -12,7 +12,9 @@
   <nav class="nav">
     <div class="container nav-inner">
       <a href="#inicio" class="nav-brand">
-        <div class="nav-logo">TMS</div>
+        <div class="nav-logo">
+          <img src="/assets/branding/logo-tms.png" alt="Logo Tu Mercado SENA">
+        </div>
         <span>TU MERCADO SENA</span>
       </a>
       <ul class="nav-links" id="navLinks">
@@ -33,9 +35,10 @@
   <!-- ====== HERO ====== -->
   <section class="hero" id="inicio">
     <div class="container hero-content">
-      <div class="tag">HERO · SECCIÓN PRINCIPAL</div>
-      <div class="tag">PROYECTO FORMATIVO · SENA 2026</div>
-      <h1 class="hero-title">TMS</h1>
+      <h1 class="hero-title">
+        <img src="/assets/branding/logo-tms.png" alt="Logo Tu Mercado SENA" class="hero-title-logo">
+        <span>TMS</span>
+      </h1>
       <p class="hero-name">Tu Mercado SENA</p>
       <p class="hero-desc">Sistema de compra y venta de productos para la comunidad SENA — disponible en Web, Móvil y Desktop.</p>
       <div class="hero-cta">
@@ -48,10 +51,9 @@
   <!-- ====== CTA USUARIO DE PRUEBA ====== -->
   <section class="section section-beige" id="cta-prueba">
     <div class="container">
-      <div class="tag">CTA PRINCIPAL · USUARIO DE PRUEBA</div>
       <div class="cta-row">
         <div class="cta-text">
-          <h2>¿Eres usuario de prueba?</h2>
+          <h2>Ven, prueba nuestra web</h2>
           <p>Accede al entorno Web de TMS, crea tu cuenta y prueba el sistema. Tu opinión nos ayuda mucho.</p>
         </div>
         <a href="https://tumercadosena.shop/" target="_blank" rel="noopener noreferrer" class="btn btn-dark btn-lg">[ ENTRAR A TMS WEB → ]</a>
@@ -62,7 +64,6 @@
   <!-- ====== SOBRE EL PROYECTO ====== -->
   <section class="section" id="proyecto">
     <div class="container">
-      <div class="tag">SECCIÓN — DESCRIPCIÓN DEL PROYECTO</div>
       <h2 class="section-heading">¿Qué es TMS?</h2>
       <p class="section-sub">Tu Mercado SENA</p>
 
@@ -85,7 +86,6 @@
   <!-- ====== RECURSOS ====== -->
   <section class="section section-beige" id="recursos">
     <div class="container">
-      <div class="tag">SECCIÓN — DESCARGAS Y DOCUMENTACIÓN</div>
       <h2 class="section-heading">Recursos del Proyecto</h2>
       <p class="section-sub">Descargas, código fuente, diseño y documentación</p>
 
@@ -154,7 +154,6 @@
   <!-- ====== VIDEOS ====== -->
   <section class="section" id="videos">
     <div class="container">
-      <div class="tag">SECCIÓN — MULTIMEDIA</div>
       <h2 class="section-heading">Videos del Proyecto</h2>
       <p class="section-sub">Presentación y demo del proyecto</p>
 
@@ -168,7 +167,6 @@
           </div>
           <h3>Video Introductorio</h3>
           <p>Video institucional y presentación del proyecto TMS.</p>
-          <span class="video-embed-label">[ video: sena.mp4 ]</span>
         </div>
         <div class="video-card video-card--coming">
           <div class="video-placeholder">
@@ -176,7 +174,6 @@
           </div>
           <h3>Demo del Sistema</h3>
           <p>Próximamente — demo completa de TMS en funcionamiento.</p>
-          <span class="video-embed-label">[ reservado · YouTube embed ]</span>
         </div>
       </div>
     </div>
@@ -185,7 +182,6 @@
   <!-- ====== EQUIPO ====== -->
   <section class="section section-beige" id="equipo">
     <div class="container">
-      <div class="tag">SECCIÓN — EQUIPO</div>
       <h2 class="section-heading">El Equipo TMS</h2>
       <p class="section-sub">Aprendices del SENA — quién hizo qué en el proyecto</p>
 
@@ -194,41 +190,66 @@
         <span>[ foto grupal del equipo — reemplazar con imagen real ]</span>
       </div>
 
+      <p class="team-hint">Haz clic en cada integrante para ver su información.</p>
+
       <div class="team-members">
-        <div class="member-card">
+        <a href="#perfil-freddy" class="member-card member-card-link">
           <div class="member-avatar">
             <img src="/assets/team/freddy-reyes-web.png" alt="Freddy Reyes - Desarrollo Web">
           </div>
           <strong>Freddy Reyes</strong>
           <span class="member-role">DESARROLLO WEB</span>
           <span class="member-tags">Frontend · Landing</span>
-        </div>
-        <div class="member-card">
+        </a>
+        <a href="#perfil-brahian" class="member-card member-card-link">
           <div class="member-avatar">BA</div>
           <strong>Brahian Alexandre</strong>
           <span class="member-role">API / BACKEND</span>
           <span class="member-tags">Servicios · Base de datos</span>
-        </div>
-        <div class="member-card">
+        </a>
+        <a href="#perfil-juan" class="member-card member-card-link">
           <div class="member-avatar">
             <img src="/assets/team/juan-rondon-lider.png" alt="Juan Rondon - Líder Móvil">
           </div>
           <strong>Juan Rondon</strong>
           <span class="member-role">MÓVIL ANDROID</span>
           <span class="member-tags">Líder móvil · Kotlin · APK</span>
-        </div>
-        <div class="member-card">
+        </a>
+        <a href="#perfil-omar" class="member-card member-card-link">
           <div class="member-avatar">OJ</div>
           <strong>Omar Jordan</strong>
           <span class="member-role">DESKTOP / GODOT</span>
           <span class="member-tags">Desktop · Integración</span>
-        </div>
-        <div class="member-card">
+        </a>
+        <a href="#perfil-valeri" class="member-card member-card-link">
           <div class="member-avatar">V</div>
           <strong>Valeri</strong>
           <span class="member-role">UI/UX · DISEÑO</span>
           <span class="member-tags">Mockups · Figma</span>
-        </div>
+        </a>
+      </div>
+
+      <div class="team-details">
+        <article id="perfil-freddy" class="team-detail-card">
+          <h3>Freddy Reyes · Web</h3>
+          <p>Encargado del desarrollo web de TMS: estructura de vistas, experiencia de navegación y ajustes visuales de la landing.</p>
+        </article>
+        <article id="perfil-brahian" class="team-detail-card">
+          <h3>Brahian Alexandre · API</h3>
+          <p>Responsable de la capa de servicios y backend: endpoints, lógica del sistema e integración con base de datos.</p>
+        </article>
+        <article id="perfil-juan" class="team-detail-card">
+          <h3>Juan Rondon · Móvil</h3>
+          <p>Líder del módulo móvil: implementación Android, pruebas de app y coordinación de funcionalidades del entorno móvil.</p>
+        </article>
+        <article id="perfil-omar" class="team-detail-card">
+          <h3>Omar Jordan · Desktop</h3>
+          <p>Encargado del entorno de escritorio y prototipo en Godot, junto con procesos de integración entre plataformas.</p>
+        </article>
+        <article id="perfil-valeri" class="team-detail-card">
+          <h3>Valeri · UI/UX</h3>
+          <p>Responsable de diseño y experiencia de usuario: mockups, estilo visual y consistencia de componentes.</p>
+        </article>
       </div>
     </div>
   </section>
@@ -236,7 +257,6 @@
   <!-- ====== ENCUESTA ====== -->
   <section class="section" id="encuesta">
     <div class="container">
-      <div class="tag">SECCIÓN — ENCUESTA DE USUARIO</div>
       <h2 class="section-heading">Tu Opinión Importa</h2>
 
       <div class="survey-card">
@@ -254,7 +274,9 @@
     <div class="container">
       <div class="footer-top">
         <div class="footer-brand">
-          <div class="footer-logo">TMS</div>
+          <div class="footer-logo">
+            <img src="/assets/branding/logo-tms.png" alt="Logo Tu Mercado SENA">
+          </div>
           <strong>Tu Mercado SENA</strong>
           <p>Proyecto formativo hecho por aprendices del SENA.</p>
         </div>
@@ -287,6 +309,7 @@
       </div>
       <div class="footer-bottom">
         <div class="footer-sena">
+          <img src="/assets/branding/logo-tms.png" alt="Logo Tu Mercado SENA" class="footer-sena-logo">
           <div class="sena-badge">SENA</div>
           <div>
             <strong>Servicio Nacional de Aprendizaje — SENA</strong>
