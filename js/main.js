@@ -28,6 +28,9 @@ if (toggle && links) {
 const memberCards = document.querySelectorAll('.member-card-link[data-member]');
 const memberModal = document.getElementById('memberModal');
 const memberModalClose = document.getElementById('memberModalClose');
+const memberModalMedia = document.getElementById('memberModalMedia');
+const memberModalMediaLabel = document.getElementById('memberModalMediaLabel');
+const memberModalMediaPlaceholder = document.getElementById('memberModalMediaPlaceholder');
 const memberModalAvatar = document.getElementById('memberModalAvatar');
 const memberModalTitle = document.getElementById('memberModalTitle');
 const memberModalRole = document.getElementById('memberModalRole');
@@ -138,6 +141,16 @@ function openMemberModal(key) {
   memberModalAvatar.innerHTML = info.avatar
     ? `<img src="${info.avatar}" alt="${info.title}">`
     : `<span>${info.avatarText || ''}</span>`;
+  if (memberModalMediaLabel) memberModalMediaLabel.textContent = info.role;
+  if (memberModalMedia) {
+    if (info.avatar) {
+      memberModalMedia.style.backgroundImage = `linear-gradient(180deg, rgba(0,0,0,0.1), rgba(0,0,0,0.45)), url('${info.avatar}')`;
+      if (memberModalMediaPlaceholder) memberModalMediaPlaceholder.textContent = '';
+    } else {
+      memberModalMedia.style.backgroundImage = `linear-gradient(165deg, color-mix(in srgb, ${info.palette.accent} 38%, #ffffff 62%), #1f2432)`;
+      if (memberModalMediaPlaceholder) memberModalMediaPlaceholder.textContent = info.avatarText || '';
+    }
+  }
   memberModalTags.innerHTML = (info.tags || [])
     .map(tag => `<span class="member-chip">${tag}</span>`)
     .join('');
