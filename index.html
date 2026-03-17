@@ -189,49 +189,57 @@
         <span>[ foto grupal del equipo — reemplazar con imagen real ]</span>
       </div>
 
-      <p class="team-hint">Haz clic en cada integrante para ver su información.</p>
+      <p class="team-hint">Haz clic en una tarjeta para abrir su perfil.</p>
 
-      <div class="team-members">
-        <button type="button" class="member-card member-card-link" data-member="freddy">
-          <div class="member-avatar">
-            <img src="/assets/team/freddy-reyes-web.png" alt="Freddy Reyes - Desarrollo Web">
-          </div>
-          <strong>Freddy Reyes</strong>
-          <span class="member-role">DESARROLLO WEB</span>
-          <span class="member-tags">Frontend · Landing</span>
-        </button>
-        <button type="button" class="member-card member-card-link" data-member="brahian">
-          <div class="member-avatar">BA</div>
-          <strong>Brahian Alexandre</strong>
-          <span class="member-role">API / BACKEND</span>
-          <span class="member-tags">Servicios · Base de datos</span>
-        </button>
-        <button type="button" class="member-card member-card-link" data-member="juan">
-          <div class="member-avatar">
-            <img src="/assets/team/juan-rondon-lider.png" alt="Juan Rondon - Líder Móvil">
-          </div>
-          <strong>Juan Rondon</strong>
-          <span class="member-role">MÓVIL ANDROID</span>
-          <span class="member-tags">Líder móvil · Kotlin · APK</span>
-        </button>
-        <button type="button" class="member-card member-card-link" data-member="omar">
-          <div class="member-avatar">OJ</div>
-          <strong>Omar Jordan</strong>
-          <span class="member-role">DESKTOP / GODOT</span>
-          <span class="member-tags">Desktop · Integración</span>
-        </button>
-        <button type="button" class="member-card member-card-link" data-member="valeri">
-          <div class="member-avatar">V</div>
-          <strong>Valeri</strong>
-          <span class="member-role">UI/UX · DISEÑO</span>
-          <span class="member-tags">Mockups · Figma</span>
-        </button>
-        <button type="button" class="member-card member-card-link" data-member="heidy">
-          <div class="member-avatar">HC</div>
-          <strong>Heidy Calderon</strong>
-          <span class="member-role">DOCUMENTACIÓN · LÍDER</span>
-          <span class="member-tags">PDF · Evidencias</span>
-        </button>
+      <div class="team-grid-shell">
+        <div class="team-members">
+          <button type="button" class="member-card member-card-link member--freddy" data-member="freddy">
+            <span class="member-accent" aria-hidden="true"></span>
+            <div class="member-avatar member-avatar-square">
+              <img src="/assets/team/freddy-reyes-web.png" alt="Freddy Reyes - Desarrollo Web">
+            </div>
+            <strong>Freddy Reyes</strong>
+            <span class="member-role">Desarrollo Web</span>
+            <span class="member-chip-row"><span class="member-chip">Frontend</span><span class="member-chip">Landing</span></span>
+          </button>
+          <button type="button" class="member-card member-card-link member--brahian" data-member="brahian">
+            <span class="member-accent" aria-hidden="true"></span>
+            <div class="member-avatar member-avatar-square">BA</div>
+            <strong>Brahian Alexandre</strong>
+            <span class="member-role">API / Backend</span>
+            <span class="member-chip-row"><span class="member-chip">Servicios</span><span class="member-chip">Base de datos</span></span>
+          </button>
+          <button type="button" class="member-card member-card-link member--juan" data-member="juan">
+            <span class="member-accent" aria-hidden="true"></span>
+            <div class="member-avatar member-avatar-square">
+              <img src="/assets/team/juan-rondon-lider.png" alt="Juan Rondon - Líder móvil">
+            </div>
+            <strong>Juan Rondon</strong>
+            <span class="member-role">Movil Android</span>
+            <span class="member-chip-row"><span class="member-chip">Kotlin</span><span class="member-chip">APK</span><span class="member-chip">Lider movil</span></span>
+          </button>
+          <button type="button" class="member-card member-card-link member--omar" data-member="omar">
+            <span class="member-accent" aria-hidden="true"></span>
+            <div class="member-avatar member-avatar-square">OJ</div>
+            <strong>Omar Jordan</strong>
+            <span class="member-role">Desktop / Godot</span>
+            <span class="member-chip-row"><span class="member-chip">Desktop</span><span class="member-chip">Integracion</span></span>
+          </button>
+          <button type="button" class="member-card member-card-link member--valeri" data-member="valeri">
+            <span class="member-accent" aria-hidden="true"></span>
+            <div class="member-avatar member-avatar-square">V</div>
+            <strong>Valeri</strong>
+            <span class="member-role">UI/UX · Diseno</span>
+            <span class="member-chip-row"><span class="member-chip">Figma</span><span class="member-chip">Mockups</span><span class="member-chip">Prototipado</span></span>
+          </button>
+          <button type="button" class="member-card member-card-link member--heidy" data-member="heidy">
+            <span class="member-accent" aria-hidden="true"></span>
+            <div class="member-avatar member-avatar-square">HC</div>
+            <strong>Heidy Calderon</strong>
+            <span class="member-role">Documentacion · Lider</span>
+            <span class="member-chip-row"><span class="member-chip">PDF</span><span class="member-chip">Evidencias</span><span class="member-chip">Gestion</span></span>
+          </button>
+        </div>
       </div>
     </div>
   </section>
@@ -239,9 +247,14 @@
   <div class="member-modal" id="memberModal" aria-hidden="true">
     <div class="member-modal-card" role="dialog" aria-modal="true" aria-labelledby="memberModalTitle">
       <button type="button" class="member-modal-close" id="memberModalClose" aria-label="Cerrar">×</button>
-      <h3 id="memberModalTitle">Integrante</h3>
-      <p class="member-modal-role" id="memberModalRole"></p>
-      <p class="member-modal-text" id="memberModalText"></p>
+      <span class="member-modal-accent" aria-hidden="true"></span>
+      <div class="member-modal-body">
+        <div class="member-modal-avatar" id="memberModalAvatar"></div>
+        <h3 id="memberModalTitle">Integrante</h3>
+        <p class="member-modal-role" id="memberModalRole"></p>
+        <div class="member-modal-tags" id="memberModalTags"></div>
+        <p class="member-modal-text" id="memberModalText"></p>
+      </div>
     </div>
   </div>
 
