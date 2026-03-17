@@ -705,7 +705,8 @@ ul { list-style: none; }
   position: relative;
   border-bottom-left-radius: 16px;
   background: linear-gradient(165deg, color-mix(in srgb, var(--modal-accent, #333) 38%, #ffffff 62%), #1f2432);
-  background-size: cover;
+  background-size: contain;
+  background-repeat: no-repeat;
   background-position: center center;
   overflow: hidden;
 }
