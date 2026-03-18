@@ -313,6 +313,16 @@ ul { list-style: none; }
   font-size: 0.88rem;
   max-width: 480px;
 }
+.cta-qr {
+  width: 116px;
+  height: 116px;
+  object-fit: contain;
+  border-radius: 10px;
+  border: 1px solid var(--border-color);
+  background: #ffffff;
+  padding: 4px;
+  box-shadow: var(--shadow-sm);
+}
 
 /* ====== ABOUT ROW ====== */
 .about-row {
