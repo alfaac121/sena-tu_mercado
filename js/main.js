@@ -157,7 +157,7 @@ function openMemberModal(key) {
       memberModalChips.style.display = 'none';
     }
   }
-  if (memberModalMediaLabel) memberModalMediaLabel.textContent = info.role;
+  if (memberModalMediaLabel) memberModalMediaLabel.textContent = info.avatarText ? `${info.avatarText} · TMS Project` : 'TMS Project';
   if (memberModalMedia) {
     if (info.avatar) {
       memberModalMedia.style.backgroundImage = `linear-gradient(180deg, rgba(0,0,0,0.1), rgba(0,0,0,0.45)), url('${info.avatar}')`;
