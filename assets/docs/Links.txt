@@ -1,0 +1,25 @@
+
+web: https://tumercadosena.shop/
+
+desktop: https://drive.google.com/file/d/1V2vgqJW0NG54tkugeDOFbzqg0FvhQIaY/view?usp=sharing
+
+encuesta: https://forms.gle/hzCHKzA3h2zwA1HAA
+
+github: https://github.com/OmarsaurioJordan/tu_mercado_sena
+
+mockmovil: https://www.figma.com/design/EgZRqiJsbOZARLOvwGo5Mj/Boceto-App-Sena?node-id=0-1&p=f
+
+mockweb: https://miro.com/app/board/uXjVJu7GfNI=/
+
+godot: https://omwekiatl.itch.io/marketsenademo
+
+movil: https://expo.dev/accounts/juanrondon/projects/mercado-sena/builds/7b1810fe-2dbf-45cf-849f-295e3d39bbf5
+
+usuarios administradores para testing:
+
+shion501g2@gmail.com
+omwekiatl@gmail.com
+kittydar282@gmail.com
+briosgalvis@gmail.com
+
+pass: soyADMIN123
