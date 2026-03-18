@@ -33,86 +33,100 @@ const memberModalMediaLabel = document.getElementById('memberModalMediaLabel');
 const memberModalMediaPlaceholder = document.getElementById('memberModalMediaPlaceholder');
 const memberModalTitle = document.getElementById('memberModalTitle');
 const memberModalRole = document.getElementById('memberModalRole');
+const memberModalBadge = document.getElementById('memberModalBadge');
 const memberModalText = document.getElementById('memberModalText');
+const memberModalChips = document.getElementById('memberModalChips');
 const memberModalCard = memberModal ? memberModal.querySelector('.member-modal-card') : null;
 
 const memberInfo = {
   freddy: {
     title: 'Freddy Reyes',
-    role: 'Desarrollo Web',
-    text: 'Soy desarrollador web especializado en el diseno y desarrollo de interfaces dinamicas. Utilizo tecnologias modernas para crear paginas rapidas, seguras y visualmente atractivas. Me enfoco en la usabilidad, la optimizacion y el detalle visual, asegurando una navegacion intuitiva. Trabajo con una mentalidad orientada a resultados, creando soluciones eficientes y adaptables.',
+    role: 'Web',
+    badge: 'LIDER',
+    text: 'Encargados del desarrollo del sitio web del sistema TMS: estructura de vistas, interaccion dinamica con Ajax, estilos y logica frontend integrada con el backend PHP.',
+    chips: ['Ajax', 'HTML', 'PHP', 'JS', 'CSS'],
     avatarText: 'FR',
     palette: {
-      accent: '#3c73d4',
-      text: '#183150',
-      textSoft: '#35557a',
-      chipBg: '#e6efff',
-      chipText: '#27476f'
+      accent: '#4d8f29',
+      text: '#27461a',
+      textSoft: '#3f6c2c',
+      chipBg: '#e9f6d5',
+      chipText: '#2f5a20'
     }
   },
   brahian: {
-    title: 'Brahian Alexandre',
+    title: 'Brahian Alexander',
     role: 'API / Backend',
-    text: 'Responsable del backend y la arquitectura de servicios: desarrollo de APIs, implementacion de logica del negocio e integracion con bases de datos. Enfocado en rendimiento, seguridad y escalabilidad para garantizar sistemas solidos y eficientes.',
+    badge: 'LIDER',
+    text: 'Responsables de la arquitectura del backend y los servicios REST. Implementan la logica de negocio en Laravel, con base de datos MySQL y despliegue en Hostinger.',
+    chips: ['Laravel', 'SQL', 'PHP', 'MySQL', 'Hostinger'],
     avatarText: 'BA',
     palette: {
-      accent: '#2d9868',
-      text: '#153326',
-      textSoft: '#2f6a4d',
-      chipBg: '#dff3e8',
-      chipText: '#2d634a'
+      accent: '#2f73c6',
+      text: '#173355',
+      textSoft: '#2b5e97',
+      chipBg: '#e7f0ff',
+      chipText: '#214f84'
     }
   },
   juan: {
-    title: 'Juan Rondon',
-    role: 'Movil Android',
-    text: 'Soy desarrollador movil especializado en la creacion de aplicaciones modernas utilizando React Native, NativeWind, Tailwind CSS y Expo. Me enfoco en construir interfaces limpias, rapidas y funcionales, combinando buen diseno con rendimiento solido. Trabajo con una mentalidad practica, orientada a resultados, desarrollando soluciones escalables que realmente aportan valor al usuario.',
+    title: 'Juan Rondón',
+    role: 'Móvil',
+    badge: 'LIDER',
+    text: 'Desarrollan la aplicacion movil multiplataforma con React Native y Expo. Utilizan TypeScript para tipado seguro y TailWind para los estilos del UI.',
+    chips: ['React Native', 'Expo', 'TypeScript', 'TailWind'],
     avatarText: 'JR',
     palette: {
-      accent: '#7b4ae2',
-      text: '#311a4f',
-      textSoft: '#68409b',
-      chipBg: '#ede2ff',
-      chipText: '#58388a'
+      accent: '#6153ce',
+      text: '#2f2867',
+      textSoft: '#5b50ac',
+      chipBg: '#ebe8ff',
+      chipText: '#4c43a0'
     }
   },
   omar: {
     title: 'Omar Jordan',
-    role: 'Desktop / Godot',
-    text: 'Encargado del desarrollo del entorno de escritorio y la implementacion del prototipo funcional en Godot Engine. Lidera la construccion de la capa de presentacion para plataformas de escritorio, asegurando la integracion fluida con los demas modulos del sistema. Ademas, gestiona la compatibilidad entre plataformas, garantizando un comportamiento consistente y estable en los diferentes entornos de ejecucion.',
+    role: 'Desktop',
+    badge: 'SCRUM MASTER',
+    text: 'Scrum Master del equipo y desarrollador de la version desktop del sistema, implementada en Python con interfaz grafica PySide6 y procesamiento de imagenes con Pillow.',
+    chips: ['Python', 'PySide6', 'Pillow'],
     avatarText: 'OJ',
     palette: {
-      accent: '#4f6e9f',
-      text: '#1f2b3f',
-      textSoft: '#4d607c',
-      chipBg: '#e9edf4',
-      chipText: '#445979'
+      accent: '#d28c1f',
+      text: '#5a3811',
+      textSoft: '#95642e',
+      chipBg: '#fcebcf',
+      chipText: '#845521'
     }
   },
-  valeri: {
-    title: 'Valeri',
-    role: 'UI/UX · Diseno',
-    text: 'Responsable del diseno de experiencia de usuario e interfaz visual del proyecto. Su trabajo abarca desde la conceptualizacion de la arquitectura de informacion hasta la creacion de wireframes, mockups de alta fidelidad y prototipos interactivos mediante Figma. Garantiza que cada pantalla cumpla con principios de usabilidad, accesibilidad y coherencia visual, asegurando una experiencia intuitiva y atractiva para el usuario final.',
-    avatarText: 'V',
+  jean: {
+    title: 'Jean Carlos',
+    role: 'Diseño',
+    badge: 'LIDER',
+    text: 'Equipo creativo responsable de la identidad visual, wireframes, ilustraciones y activos graficos del proyecto, usando herramientas como Figma, Canva y Godot.',
+    chips: ['Draw.io', 'Canva', 'Figma', 'IbisPaintX', 'Godot'],
+    avatarText: 'JC',
     palette: {
-      accent: '#cc5b8f',
-      text: '#4b1e35',
-      textSoft: '#8a4568',
-      chipBg: '#ffe1ef',
-      chipText: '#8a3f63'
+      accent: '#b14672',
+      text: '#5f1f3c',
+      textSoft: '#93456a',
+      chipBg: '#ffe7f2',
+      chipText: '#8e355f'
     }
   },
   heidy: {
-    title: 'Heidy Calderon',
-    role: 'Documentacion · Lider',
-    text: 'Responsable de la gestion integral de la documentacion tecnica y operativa del proyecto. Coordina la elaboracion de evidencias de avance, la generacion de entregables formales en formato PDF y la administracion del material de soporte del sistema TMS. Su rol como lider implica velar por la trazabilidad del proyecto, mantener los registros actualizados y asegurar que toda la informacion este organizada y disponible para los distintos miembros del equipo.',
+    title: 'Heidy Calderón',
+    role: 'Documentación',
+    badge: 'LIDER',
+    text: 'Encargada de la documentacion oficial del proyecto: diagramas UML, cumplimiento de norma ISO-25010, control de versiones en GitHub, minutas de reunion y formularios de seguimiento.',
+    chips: ['UML', 'ISO-25010', 'GitHub', 'MR', 'Word', 'Forms'],
     avatarText: 'HC',
     palette: {
-      accent: '#c6812f',
-      text: '#4a3218',
-      textSoft: '#8b6238',
-      chipBg: '#fbe8cf',
-      chipText: '#80552c'
+      accent: '#2f9f8f',
+      text: '#18413a',
+      textSoft: '#2c6e64',
+      chipBg: '#dff6ef',
+      chipText: '#1f655b'
     }
   }
 };
@@ -129,7 +143,20 @@ function openMemberModal(key) {
 
   memberModalTitle.textContent = info.title;
   memberModalRole.textContent = info.role;
+  if (memberModalBadge) {
+    memberModalBadge.textContent = info.badge || '';
+    memberModalBadge.style.display = info.badge ? 'inline-flex' : 'none';
+  }
   memberModalText.textContent = info.text;
+  if (memberModalChips) {
+    if (Array.isArray(info.chips) && info.chips.length > 0) {
+      memberModalChips.innerHTML = info.chips.map((chip) => `<span class="member-modal-chip">${chip}</span>`).join('');
+      memberModalChips.style.display = 'flex';
+    } else {
+      memberModalChips.innerHTML = '';
+      memberModalChips.style.display = 'none';
+    }
+  }
   if (memberModalMediaLabel) memberModalMediaLabel.textContent = info.role;
   if (memberModalMedia) {
     if (info.avatar) {
