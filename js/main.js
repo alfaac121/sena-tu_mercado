@@ -215,7 +215,7 @@ function openMemberModal(key) {
       memberModalMedia.style.backgroundImage = `linear-gradient(180deg, rgba(0,0,0,0.1), rgba(0,0,0,0.45)), url('${info.avatar}')`;
       if (memberModalMediaPlaceholder) memberModalMediaPlaceholder.textContent = '';
     } else {
-      memberModalMedia.style.backgroundImage = `linear-gradient(165deg, color-mix(in srgb, ${info.palette.accent} 38%, #ffffff 62%), #1f2432)`;
+      memberModalMedia.style.backgroundImage = '';
       if (memberModalMediaPlaceholder) memberModalMediaPlaceholder.textContent = info.avatarText || '';
     }
   }
@@ -225,6 +225,7 @@ function openMemberModal(key) {
     memberModalCard.style.setProperty('--modal-text-soft', info.palette.textSoft);
     memberModalCard.style.setProperty('--modal-chip-bg', info.palette.chipBg);
     memberModalCard.style.setProperty('--modal-chip-text', info.palette.chipText);
+    memberModalCard.style.setProperty('--modal-surface', info.palette.chipBg);
   }
 
   memberModal.classList.add('open');

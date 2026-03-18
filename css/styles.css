@@ -705,9 +705,9 @@ ul { list-style: none; }
   position: relative;
   border-bottom-left-radius: 22px;
   background:
-    radial-gradient(circle at 8px 8px, rgba(0,0,0,0.06) 1px, transparent 1px),
-    linear-gradient(165deg, color-mix(in srgb, var(--modal-accent, #333) 22%, #f2f5fb 78%), #eef2f8);
-  background-size: 16px 16px, cover;
+    radial-gradient(circle at 10px 10px, rgba(0,0,0,0.07) 1px, transparent 1px),
+    linear-gradient(165deg, color-mix(in srgb, var(--modal-accent, #556) 10%, #ffffff 90%), var(--modal-surface, #eef2f8));
+  background-size: 20px 20px, cover;
   background-repeat: repeat, no-repeat;
   background-position: center center;
   overflow: hidden;
@@ -716,7 +716,7 @@ ul { list-style: none; }
   content: '';
   position: absolute;
   inset: 0;
-  background: linear-gradient(180deg, rgba(255,255,255,0.03), rgba(0,0,0,0.12));
+  background: linear-gradient(180deg, rgba(255,255,255,0.05), rgba(255,255,255,0.01));
 }
 .member-modal-media-label {
   position: absolute;
@@ -743,7 +743,7 @@ ul { list-style: none; }
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 3.2rem;
+  font-size: 3rem;
   font-weight: 500;
   color: var(--modal-accent, #335);
   background: rgba(255,255,255,0.9);
@@ -758,13 +758,13 @@ ul { list-style: none; }
   z-index: 1;
   display: flex;
   flex-direction: column;
-  gap: 10px;
+  gap: 12px;
 }
 .member-modal-roster-item {
   display: flex;
   align-items: center;
   gap: 10px;
-  min-height: 54px;
+  min-height: 56px;
   border-radius: 12px;
   border: 1px solid color-mix(in srgb, var(--modal-accent, #667) 14%, #ffffff 86%);
   background: rgba(255,255,255,0.72);
@@ -795,7 +795,7 @@ ul { list-style: none; }
   font-weight: 700;
 }
 .member-modal-roster-name {
-  font-size: 1.55rem;
+  font-size: 1.5rem;
   font-weight: 600;
 }
 .member-modal-pagination {
@@ -867,7 +867,7 @@ ul { list-style: none; }
 }
 .member-modal-project {
   margin: 0;
-  font-size: 1.6rem;
+  font-size: 2rem;
   font-weight: 700;
   color: #f4f7fa;
 }
@@ -888,7 +888,7 @@ ul { list-style: none; }
 .member-modal.open .member-modal-content > :nth-child(6) { transition-delay: 0.37s; }
 .member-modal-card h3 {
   font-family: var(--serif);
-  font-size: 46px;
+  font-size: clamp(2.45rem, 4.2vw, 3.35rem);
   line-height: 1.1;
   color: #f7f3ea;
   margin-bottom: 8px;
@@ -929,9 +929,9 @@ ul { list-style: none; }
   color: #d7dce4;
 }
 .member-modal-text {
-  font-size: 1.85rem;
+  font-size: clamp(1.18rem, 2vw, 1.55rem);
   color: #f0f4f8;
-  line-height: 1.55;
+  line-height: 1.5;
 }
 .member-modal-chip-row {
   margin-top: 18px;
@@ -940,9 +940,9 @@ ul { list-style: none; }
   gap: 10px;
 }
 .member-modal-chip {
-  font-size: 1.2rem;
+  font-size: 1.04rem;
   line-height: 1;
-  padding: 11px 16px;
+  padding: 10px 15px;
   border-radius: 12px;
   background: var(--modal-chip-bg, rgba(0,0,0,0.06));
   color: var(--modal-chip-text, var(--modal-text-soft, var(--text-light)));
@@ -950,13 +950,13 @@ ul { list-style: none; }
   font-weight: 600;
 }
 @media (max-width: 980px) {
-  .member-modal-card h3 { font-size: 36px; }
+  .member-modal-card h3 { font-size: 34px; }
   .member-modal-role { font-size: 1rem; }
   .member-modal-project { font-size: 1.25rem; }
   .member-modal-kicker { font-size: 1rem; }
-  .member-modal-text { font-size: 1.25rem; }
+  .member-modal-text { font-size: 1.12rem; }
   .member-modal-chip { font-size: 1rem; }
-  .member-modal-roster-name { font-size: 1.15rem; }
+  .member-modal-roster-name { font-size: 1.08rem; }
 }
 
 .member--freddy { --m-bg: #f2f8ea; --m-text: #27461a; --m-text-soft: #3f6c2c; --m-chip-bg: #e9f6d5; --m-chip-text: #2f5a20; --m-accent: #4d8f29; }
