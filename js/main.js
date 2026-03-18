@@ -41,7 +41,7 @@ const memberInfo = {
     title: 'Freddy Reyes',
     role: 'Desarrollo Web',
     text: 'Soy desarrollador web especializado en el diseno y desarrollo de interfaces dinamicas. Utilizo tecnologias modernas para crear paginas rapidas, seguras y visualmente atractivas. Me enfoco en la usabilidad, la optimizacion y el detalle visual, asegurando una navegacion intuitiva. Trabajo con una mentalidad orientada a resultados, creando soluciones eficientes y adaptables.',
-    avatar: '/assets/team/freddy-reyes-web.png',
+    avatarText: 'FR',
     palette: {
       accent: '#3c73d4',
       text: '#183150',
@@ -67,7 +67,7 @@ const memberInfo = {
     title: 'Juan Rondon',
     role: 'Movil Android',
     text: 'Soy desarrollador movil especializado en la creacion de aplicaciones modernas utilizando React Native, NativeWind, Tailwind CSS y Expo. Me enfoco en construir interfaces limpias, rapidas y funcionales, combinando buen diseno con rendimiento solido. Trabajo con una mentalidad practica, orientada a resultados, desarrollando soluciones escalables que realmente aportan valor al usuario.',
-    avatar: '/assets/team/juan-rondon-lider.png',
+    avatarText: 'JR',
     palette: {
       accent: '#7b4ae2',
       text: '#311a4f',
