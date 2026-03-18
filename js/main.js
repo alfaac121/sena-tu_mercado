@@ -31,6 +31,9 @@ const memberModalClose = document.getElementById('memberModalClose');
 const memberModalMedia = document.getElementById('memberModalMedia');
 const memberModalMediaLabel = document.getElementById('memberModalMediaLabel');
 const memberModalMediaPlaceholder = document.getElementById('memberModalMediaPlaceholder');
+const memberModalRoster = document.getElementById('memberModalRoster');
+const memberModalDots = document.getElementById('memberModalDots');
+const memberModalHeadAvatar = document.getElementById('memberModalHeadAvatar');
 const memberModalTitle = document.getElementById('memberModalTitle');
 const memberModalRole = document.getElementById('memberModalRole');
 const memberModalBadge = document.getElementById('memberModalBadge');
@@ -45,6 +48,12 @@ const memberInfo = {
     badge: 'LIDER',
     text: 'Encargados del desarrollo del sitio web del sistema TMS: estructura de vistas, interaccion dinamica con Ajax, estilos y logica frontend integrada con el backend PHP.',
     chips: ['Ajax', 'HTML', 'PHP', 'JS', 'CSS'],
+    roster: [
+      { short: 'FR', name: 'Freddy Reyes', active: true },
+      { short: 'JS', name: 'Johan Stiven' },
+      { short: 'DA', name: 'Daniel Alejandro' }
+    ],
+    dotIndex: 2,
     avatarText: 'FR',
     palette: {
       accent: '#4d8f29',
@@ -60,6 +69,12 @@ const memberInfo = {
     badge: 'LIDER',
     text: 'Responsables de la arquitectura del backend y los servicios REST. Implementan la logica de negocio en Laravel, con base de datos MySQL y despliegue en Hostinger.',
     chips: ['Laravel', 'SQL', 'PHP', 'MySQL', 'Hostinger'],
+    roster: [
+      { short: 'BA', name: 'Brahian Alexander', active: true },
+      { short: 'EC', name: 'Erick Castellanos' },
+      { short: 'KB', name: 'Kevin Barona' }
+    ],
+    dotIndex: 1,
     avatarText: 'BA',
     palette: {
       accent: '#2f73c6',
@@ -75,6 +90,12 @@ const memberInfo = {
     badge: 'LIDER',
     text: 'Desarrollan la aplicacion movil multiplataforma con React Native y Expo. Utilizan TypeScript para tipado seguro y TailWind para los estilos del UI.',
     chips: ['React Native', 'Expo', 'TypeScript', 'TailWind'],
+    roster: [
+      { short: 'JR', name: 'Juan Rondón', active: true },
+      { short: 'SG', name: 'Sebastián Granobles' },
+      { short: 'JV', name: 'Javier Varela' }
+    ],
+    dotIndex: 3,
     avatarText: 'JR',
     palette: {
       accent: '#6153ce',
@@ -90,6 +111,10 @@ const memberInfo = {
     badge: 'SCRUM MASTER',
     text: 'Scrum Master del equipo y desarrollador de la version desktop del sistema, implementada en Python con interfaz grafica PySide6 y procesamiento de imagenes con Pillow.',
     chips: ['Python', 'PySide6', 'Pillow'],
+    roster: [
+      { short: 'OJ', name: 'Omar Jordan', active: true }
+    ],
+    dotIndex: 4,
     avatarText: 'OJ',
     palette: {
       accent: '#d28c1f',
@@ -105,6 +130,12 @@ const memberInfo = {
     badge: 'LIDER',
     text: 'Equipo creativo responsable de la identidad visual, wireframes, ilustraciones y activos graficos del proyecto, usando herramientas como Figma, Canva y Godot.',
     chips: ['Draw.io', 'Canva', 'Figma', 'IbisPaintX', 'Godot'],
+    roster: [
+      { short: 'JC', name: 'Jean Carlos', active: true },
+      { short: 'VC', name: 'Valery Claros' },
+      { short: 'BR', name: 'Brandon Ríos' }
+    ],
+    dotIndex: 5,
     avatarText: 'JC',
     palette: {
       accent: '#b14672',
@@ -120,6 +151,12 @@ const memberInfo = {
     badge: 'LIDER',
     text: 'Encargada de la documentacion oficial del proyecto: diagramas UML, cumplimiento de norma ISO-25010, control de versiones en GitHub, minutas de reunion y formularios de seguimiento.',
     chips: ['UML', 'ISO-25010', 'GitHub', 'MR', 'Word', 'Forms'],
+    roster: [
+      { short: 'HC', name: 'Heidy Calderón', active: true },
+      { short: 'AC', name: 'Ashley Catalina' },
+      { short: 'DA', name: 'Darling Angulo' }
+    ],
+    dotIndex: 0,
     avatarText: 'HC',
     palette: {
       accent: '#2f9f8f',
@@ -143,6 +180,7 @@ function openMemberModal(key) {
 
   memberModalTitle.textContent = info.title;
   memberModalRole.textContent = info.role;
+  if (memberModalHeadAvatar) memberModalHeadAvatar.textContent = info.avatarText || 'TM';
   if (memberModalBadge) {
     memberModalBadge.textContent = info.badge || '';
     memberModalBadge.style.display = info.badge ? 'inline-flex' : 'none';
@@ -157,7 +195,21 @@ function openMemberModal(key) {
       memberModalChips.style.display = 'none';
     }
   }
-  if (memberModalMediaLabel) memberModalMediaLabel.textContent = info.avatarText ? `${info.avatarText} · TMS Project` : 'TMS Project';
+  if (memberModalMediaLabel) memberModalMediaLabel.textContent = info.avatarText ? `${info.avatarText}` : 'TM';
+  if (memberModalRoster) {
+    const roster = Array.isArray(info.roster) ? info.roster : [];
+    memberModalRoster.innerHTML = roster.map((item) => {
+      const activeClass = item.active ? ' is-active' : '';
+      return `<li class="member-modal-roster-item${activeClass}"><span class="member-modal-roster-short">${item.short}</span><span class="member-modal-roster-name">${item.name}</span></li>`;
+    }).join('');
+  }
+  if (memberModalDots) {
+    const totalDots = 6;
+    const activeDot = Number.isInteger(info.dotIndex) ? info.dotIndex : 0;
+    memberModalDots.innerHTML = Array.from({ length: totalDots }, (_, i) => (
+      `<span class="member-modal-dot${i === activeDot ? ' is-active' : ''}"></span>`
+    )).join('');
+  }
   if (memberModalMedia) {
     if (info.avatar) {
       memberModalMedia.style.backgroundImage = `linear-gradient(180deg, rgba(0,0,0,0.1), rgba(0,0,0,0.45)), url('${info.avatar}')`;
